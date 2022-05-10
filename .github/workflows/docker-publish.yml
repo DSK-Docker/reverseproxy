@@ -12,7 +12,7 @@ jobs:
     uses: DSK-Docker/workflows/.github/workflows/main.yml@master
     with:
       docker-run-config: docker run --volume /var/run/docker.sock:/tmp/docker.sock:ro
-      docker-stats-command: sh -c "ls -l /proc/*/exe 2>/dev/null ; true"
+      docker-stats-command: ls -l /proc/*/exe 2>/dev/null ; true
     secrets:
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
       DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
