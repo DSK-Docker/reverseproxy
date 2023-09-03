@@ -11,7 +11,7 @@ jobs:
   call-from-workflows:
     uses: DSK-Docker/workflows/.github/workflows/main.yml@master
     with:
-      docker-run-config: docker run --volume /var/run/docker.sock:/tmp/docker.sock:ro
+      docker-run-config: docker run --volume /var/run/docker.sock:/tmp/docker.sock:ro -env TRUST_DOWNSTREAM_PROXY=true
       docker-stats-command: ls -l /proc/*/exe 2>/dev/null ; true
     secrets:
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
