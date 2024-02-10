@@ -1,4 +1,4 @@
-FROM jwilder/nginx-proxy:1.4.0
+FROM jwilder/nginx-proxy:1.5.0
 
 LABEL maintainer "Dschinghis Kahn"
 
